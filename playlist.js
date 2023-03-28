@@ -2,8 +2,6 @@ require('dotenv').config()
 const axios = require('axios')
 const base64 = require('base-64')
 
-
-
 const CLIENT_ID = process.env.CLIENT_ID
 const CLIENT_SECRET = process.env.CLIENT_SECRET
 
@@ -25,7 +23,7 @@ async function getToken() {
   const token = response.data.access_token
   return token
 }
-var artistName ='X-Japan'
+var artistName ='MISIA'
 async function searchForArtist(token, artistName) {
   const headers = {
     'Authorization': `Bearer ${token}`
@@ -54,7 +52,7 @@ async function getSongsByArtist(token, artistId) {
 
   const market = 'JP'
   const seed_genres ='j-pop'
-  const valence = '0.7'
+  const valence = '0.1'
   const url = `https://api.spotify.com/v1/recommendations?limit=15&market=${market}&seed_genres=${seed_genres}&target_valence=${valence}`
 
   const response = await axios.get(url, {
