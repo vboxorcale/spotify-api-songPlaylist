@@ -50,9 +50,9 @@ async function getSongsByArtist(token, artistId) {
     'Authorization': `Bearer ${token}`
   }
 
-  const market = 'JP'
-  const seed_genres ='j-pop'
-  const valence = '0.1'
+  const market = 'US'
+  const seed_genres ='pop'
+  const valence = '0.9'
   const url = `https://api.spotify.com/v1/recommendations?limit=15&market=${market}&seed_genres=${seed_genres}&target_valence=${valence}`
 
   const response = await axios.get(url, {
