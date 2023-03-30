@@ -1,6 +1,11 @@
 # spotify-api-songPlaylist
-nodejs
-![Alt text](./image/playlist.jpg)
+## nodejs
+
+<video width="320" height="240" controls>
+  <source src="./image/spotifyApidemo.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
 ## How to test this api
 ### Run the below git command in the terminal
 
